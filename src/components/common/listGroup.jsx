@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
 const ListGroup = (props) => {
+  console.log('props', props);
   const { items } = props;
   return (
     <ul className="list-group">
-      {items.map(item => {
+      {items.map(item => (
         <li key={item._id} className="list-group-item">
           {item.name}
         </li>
-      })}
+      ))}
     </ul>
   );
 }
